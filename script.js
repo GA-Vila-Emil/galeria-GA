@@ -13,6 +13,9 @@ function carregarImg() {
         const fotoItens = document.createElement("div");
         fotoItens.className = 'fotos-itens';
 
+        const ItensiImg =document.createElement("div")
+        ItensiImg.className= 'itens-img'
+
         // Criando a tag de imagem
         const img = document.createElement('img');
         img.src = foto.url;
@@ -38,8 +41,10 @@ function carregarImg() {
             });
 
         // Adicionando a imagem e o botão de download ao item da galeria
-        fotoItens.appendChild(img);
-        fotoItens.appendChild(btndownlod);
+        fotoItens.appendChild(ItensiImg)
+        ItensiImg.appendChild(img)
+
+        fotoItens.appendChild(btndownlod)
 
         // Adicionando o item à galeria
         galeria.appendChild(fotoItens);
