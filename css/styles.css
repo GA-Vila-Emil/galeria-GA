@@ -142,26 +142,28 @@ margin-left:10px;
     width: 100%;
 }
 .fotos-itens{
-width: 20%;
-overflow: hidden;
-
-
-
-
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
 }
 
 .fotos-itens img{  
- 
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: contain;
-transition: scale .8s ease;
-  
-  
+transition: scale .8s ease; 
+}
+
+.itens-img{
+    overflow: hidden;
+
 }
 
 .fotos-itens img:hover{
-   scale:1.80;
+   scale:1.5;
   
    
 }
@@ -171,7 +173,7 @@ transition: scale .8s ease;
     font-size: 20px;
     margin-top: 5px;
     color: white;
-    background-color: gray;
+    background-color: rgb(224, 15, 15);
     border-radius: 8%;
     cursor: pointer;   
 }
@@ -180,12 +182,19 @@ transition: scale .8s ease;
     padding:0px;
     margin: 0;
     background-color:transparent ;
-  
+    font-weight: 100;
+    padding: .2em ;
+    transition: font-weight .2s ease;
 }
-.btn-download::after{
-    content: url( imagens/icon\ 35x35.png
-    );
+
+.btn-download:hover {
+    font-weight: 500;
+
 }
+
+
+
+
 
 
 .info{
@@ -196,7 +205,6 @@ transition: scale .8s ease;
 }
 .container-info{
     display: flex;
-    /* position: relative; */
     z-index: 10;
     min-height: 100vh;;
     display: flex;
@@ -259,10 +267,10 @@ transition: scale .8s ease;
 
 .lideres {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     width: 100%;
-    align-items: flex-start;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     margin-top: 5.5em;
     gap: 10em;
 }
@@ -279,6 +287,23 @@ transition: scale .8s ease;
 
 .lideres .subtitulo{
     font-size: 1.7em;
+}
+
+.LD-adolecentes img {
+    width: 400px;
+    height: 400px;
+}
+
+.LD-jovens, .LD-adolecentes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.LD-jovens{
+    flex-direction: row-reverse;
 }
 
 .culto-jovem {
@@ -563,7 +588,7 @@ font-size: 4em;
 }
 
 .fotos-itens{
-    width: 60%;
+    width: 40%;
 }
 
 .tiltle-info{
@@ -592,11 +617,18 @@ font-size: 4em;
 
 .lideres .img-lideres{
     width: 200px;
+    height: 200px;
     box-shadow: 0px 0px 20px 2px rgb(0, 0, 0, 0.4);
 }
 
 .titulos .subtitulo {
     text-align: center;
+}
+
+.LD-jovens, .LD-adolecentes{
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .container-jovem{
@@ -626,12 +658,12 @@ font-size: 4em;
 }
 
 .container-grupo{
-    width: 90vw;
+    width: 80vw;
     box-shadow: 0px 0px 20px 2px rgb(0, 0, 0, .4);
 }
 
 .container-pg img {
-    width: 90vw;
+    width: 100%;
 
 }
 
